@@ -1,0 +1,222 @@
+/* font Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+/* variaveis */
+
+:root{
+    --roxo: #820ad1;
+}
+
+/* animações */
+
+@keyframes giroLogo {
+    from{
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+    }
+}
+
+
+/* gerais */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+
+body{
+    background-color: var(--roxo);
+}
+
+/* logo */
+
+.logo{
+    margin: 24px 0 0 32px;
+    display: inline-block;
+}
+
+.logo:hover{
+    animation-name: giroLogo ;
+    animation-duration: 1s;
+}
+
+
+/* area login */
+
+#area-login{
+    background-color: #fff;
+    width: 448px;
+    position: absolute;
+    left: 50%;
+    top: 49px;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;  
+}
+
+#area-login #area-titulo{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 45px;
+}
+
+#area-login #area-titulo p{ 
+    color: #222222;
+    font-size: 21px;
+    line-height: 39px;
+}
+
+#area-login #area-formularios{
+    display: flex;
+    justify-content: center;
+}
+
+#area-login #area-formularios #formularios{
+    width: 320px;  
+}
+
+#area-cpf,
+#area-senha{
+    width: 100%;
+    height: 79px;
+}
+
+ label{
+    color: #777;
+    font-weight: 300;
+    font-size: 18px;
+    position: relative;
+    top: 15px;
+    transition: top 0.5s, font-size 0.5s;
+    -webkit-transition: top 0.5s, font-size 0.5s;
+    -moz-transition: top 0.5s, font-size 0.5s;
+    -ms-transition: top 0.5s, font-size 0.5s;
+    -o-transition: top 0.5s, font-size 0.5s;
+}
+
+.caixa-acionada-label{
+    top: 0px;
+    font-size: 14px;
+    color: var(--roxo);
+    transition: top 0.5s, font-size 0.5s;
+    -webkit-transition: top 0.5s, font-size 0.5s;
+    -moz-transition: top 0.5s, font-size 0.5s;
+    -ms-transition: top 0.5s, font-size 0.5s;
+    -o-transition: top 0.5s, font-size 0.5s;
+}
+
+#area-login #area-formularios #formularios input{
+    width: 320px;
+    border: none;
+    outline: none;
+    border-bottom: 1px dotted #ccc;
+    font-size: 20px;
+    color: #404040;
+    font-weight: 300;
+}
+
+/* botão */
+
+
+button{
+    margin-top: 35px;
+    padding:23px 32px 23px 32px;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+button.btn-ativado{ 
+    color: var(--roxo) !important;
+    border: 1px solid var(--roxo) !important;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-weight: 400;
+    transition: color 0.5s, background 0.5s;
+    -webkit-transition: color 0.5s, background 0.5s;
+    -moz-transition: color 0.5s, background 0.5s;
+    -ms-transition: color 0.5s, background 0.5s;
+    -o-transition: color 0.5s, background 0.5s;
+    cursor: pointer;
+}
+
+button.btn-ativado:hover{
+    color: #fff !important;
+    background-color: #AB4BEA;
+    transition: color 0.5s, background 0.5s;
+    -webkit-transition: color 0.5s, background 0.5s;
+    -moz-transition: color 0.5s, background 0.5s;
+    -ms-transition: color 0.5s, background 0.5s;
+    -o-transition: color 0.5s, background 0.5s;
+}
+
+/* outros acessos */
+
+#area-outros-acessos{
+    margin: 48px 0;
+    width: 100%;
+}
+
+#area-outros-acessos a{
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--roxo);
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding:  0 0 20px 0;
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+}
+
+#area-outros-acessos a:hover{
+    color: #404040;
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+}
+
+
+
+
+
+
+
+
+
