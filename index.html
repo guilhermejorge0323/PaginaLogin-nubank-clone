@@ -7,14 +7,17 @@
     <link  rel="icon" href="img/new-logo-white.svg">
     <!-- css -->
     <link rel="stylesheet" href="estilo.css">
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
     <title>Login - Nubank</title>
 </head>
 <body>
     
     <main>
         <!-- logo -->
-        <div class="logo">
-            <img src="img/new-logo-white.svg" alt="">
+        <div class="logo ocultar" onclick="giroLogo()">
+            <img id="logo" src="img/new-logo-white.svg" alt="">
         </div>
 
         <!-- area login -->
@@ -31,16 +34,16 @@
                             <form action="">
 
                                 <div id="area-cpf" class="borda-p-intput">
-                                    <label for="">CPF</label>
-                                    <input type="text" name="" id="cpf">
+                                    <label   for="cpf">CPF</label>
+                                    <input type="text"  onblur="formulariCpfDesativado()"   onfocus="formularioCpfAtivado()" onkeyup="verificaCpf()"  maxlength="14"  id="cpf">
                                 </div>
 
                                 <div id="area-senha" class="borda-p-intput">
-                                    <label for="">Senha</label>
-                                    <input type="password" name="" id="senha">
+                                    <label for="senha">Senha</label>
+                                    <input type="password" onblur="fomrularioSenhaDesativado()" onfocus="formularioSenhaAtivado()" onkeyup="verificaSenha()"  id="senha">
                                 </div>
 
-                                <button type="button"  disabled>continuar</button>
+                                <button type="button" id="btn"  disabled>continuar</button>
 
                             </form>
                         </div>
@@ -57,6 +60,7 @@
         <!-- fim area logins -->
     </main>
     
-<script src="index.js"></script>    
+<script src="js/index.js"></script>
+<script src="js/valida.js"></script>   
 </body>
 </html>

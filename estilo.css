@@ -51,7 +51,7 @@ body{
     display: inline-block;
 }
 
-.logo:hover{
+.girarLogo{
     animation-name: giroLogo ;
     animation-duration: 1s;
 }
@@ -96,7 +96,7 @@ body{
 }
 
 #area-login #area-formularios #formularios{
-    width: 320px;  
+    width: 71%;  
 }
 
 #area-cpf,
@@ -110,33 +110,42 @@ body{
     font-weight: 300;
     font-size: 18px;
     position: relative;
-    top: 15px;
-    transition: top 0.5s, font-size 0.5s;
-    -webkit-transition: top 0.5s, font-size 0.5s;
-    -moz-transition: top 0.5s, font-size 0.5s;
-    -ms-transition: top 0.5s, font-size 0.5s;
-    -o-transition: top 0.5s, font-size 0.5s;
+    top: 20px;
+    transition: top 0.2s, font-size 0.2s;
+    -webkit-transition: top 0.2s, font-size 0.2s;
+    -moz-transition: top 0.2s, font-size 0.2s;
+    -ms-transition: top 0.2s, font-size 0.2s;
+    -o-transition: top 0.2s, font-size 0.2s;
 }
 
 .caixa-acionada-label{
     top: 0px;
     font-size: 14px;
     color: var(--roxo);
-    transition: top 0.5s, font-size 0.5s;
-    -webkit-transition: top 0.5s, font-size 0.5s;
-    -moz-transition: top 0.5s, font-size 0.5s;
-    -ms-transition: top 0.5s, font-size 0.5s;
-    -o-transition: top 0.5s, font-size 0.5s;
+    transition: top 0.2s, font-size 0.2s;
+    -webkit-transition: top 0.2s, font-size 0.2s;
+    -moz-transition: top 0.2s, font-size 0.2s;
+    -ms-transition: top 0.2s, font-size 0.2s;
+    -o-transition: top 0.2s, font-size 0.2s;
 }
 
 #area-login #area-formularios #formularios input{
-    width: 320px;
+    width: 100%;
     border: none;
     outline: none;
     border-bottom: 1px dotted #ccc;
     font-size: 20px;
     color: #404040;
     font-weight: 300;
+}
+
+
+.erroFormularaios label{
+    color: #ff6961;
+}
+
+.erroFormularaios input{
+    border-color: #ff6961 !important;
 }
 
 /* botão */
@@ -210,6 +219,41 @@ button.btn-ativado:hover{
     -moz-transition: color 0.5s;
     -ms-transition: color 0.5s;
     -o-transition: color 0.5s;
+}
+
+
+/* dispositivos moblies */
+
+
+@media (max-width: 460px){
+
+    .ocultar{
+        display: none;
+    }
+
+    #area-login{
+        width: 95% !important;
+        height: 550px;
+        position: fixed;
+    }
+
+    #area-login #area-formularios #formularios{
+        width: 75%;
+    }
+}
+
+/* tablest */
+@media(max-width: 768px){
+    #area-login{
+        position: fixed;
+        width: 65%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        -o-transform: translate(-50%,-50%);
+}
 }
 
 
